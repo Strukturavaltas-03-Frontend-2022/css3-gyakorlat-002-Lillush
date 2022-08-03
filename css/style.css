@@ -5,7 +5,7 @@ FIGYELEM: a __selector__ szó helyére kell beírni a jó szelektorokat!
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 
 /* 1: a html és a body elem */
-html
+html, body
 {
   font-family: 'Poppins', sans-serif;
 }
@@ -98,7 +98,7 @@ html
 
 /* 9: a menu__hamburger osztályú elemeken belül lévő span elemek 
 before vagy after pszeudo-elemei */
-.menu__hamburger span::after::before
+.menu__hamburger span::before, .menu__hamburger span::after
 {
   position: absolute;
   display: block;
@@ -131,7 +131,7 @@ before pszeudo-elemei */
 
 /* 13: a menu__hamburger--htx osztályú elemeken belül lévő span elemek 
 before vagy after pszeudo-elemei */
-.menu__hamburger--htx span::after::before
+.menu__hamburger--htx span::after, .menu__hamburger--htx span::before
 {
   transition-duration: 0.3s, 0.3s;
   transition-delay: 0.3s, 0s;
@@ -153,7 +153,7 @@ after pszeudo-elemei */
 
 /* 16: a menu__hamburger--htx és az is-active osztályhoz egyszerre tartozó
  elemeken belül lévő span elemek */
-.menu__hamburger--htx.is-active span
+.menu__hamburger--htx span, .is-active span
 {
   background: none;
 }
@@ -176,7 +176,7 @@ after pszeudo-elemei */
 
 /* 19: a menu__hamburger--htx és az is-active osztályhoz egyszerre tartozó
  elemeken belül lévő span elemek before vagy after pszeudo-elemei */
- .menu__hamburger--htx.is-active span
+ .menu__hamburger--htx span::before, .menu__hamburger--htx span::after, .is-active span::after, .is-active span::after
 {
   transition-delay: 0s, 0.3s;
 }
